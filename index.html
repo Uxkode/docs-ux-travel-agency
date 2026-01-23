@@ -116,9 +116,10 @@
         <h2>Getting Started</h2>
         <p>Follow these steps to install and set up UX Travel Agency:</p>
         <ol>
-          <li>Download the project files and extract them to your web server directory (e.g., <code>htdocs/ux-travel-agency/</code>).</li>
-          <li>Create a MySQL database and import the <code>schema.sql</code> file.</li>
-          <li>Update the database credentials in <code>config.php</code> with your connection details.</li>
+          <li>Upload the downloaded <code>ux-travel-agency.zip</code> file to your web server directory using cPanel (e.g., <code>public-html/ux-travel-agency.zip or admin.yourdomain.com/ux-travel-agency.zip</code>).</li>
+          <li>Now extract the zip file and select all files folder in the <code>ux-travel-agency</code> folder and then move all files to the <code>public-html or admin.yourdomain.com</code> main directory.</li>
+          <li>Create a MySQL database and import the <code>schema.sql</code> file to create all necessary database tables.</li>
+          <li>Edit the <code>config.php</code> file and then first update the database name, database user and password information correctly.</li>
           <li>Set the correct <code>APP_URL</code> in <code>config.php</code> to match your installation path.</li>
           <li>Ensure the <code>uploads/</code> directory is writable (chmod 755).</li>
           <li>Access the application at your configured URL and log in with your admin credentials.</li>
