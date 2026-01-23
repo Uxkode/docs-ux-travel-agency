@@ -400,6 +400,14 @@ code {
   padding: 16px 24px;
   color: var(--color-text-muted);
 }
+.site-footer a {
+    text-decoration: none;
+    color: green;
+    font-weight: 400;
+}
+.site-footer a:hover {
+    font-weight: 600;
+}
 
 /*----------------------
 # Responsive Styles
