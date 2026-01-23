@@ -49,8 +49,6 @@ This documentation serves as your complete guide to setup, configuration, and da
 **Current Version:** 1.1.0  
 **Last Updated:** January 23, 2026
 
-See [Changelog](index.html#changelog) for version history and updates.
-
 
 ## 🤝 Contributing & Feedback
 
