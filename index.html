@@ -114,16 +114,23 @@
       <!-- GETTING STARTED -->
       <section id="getting-started">
         <h2>Getting Started</h2>
-        <p>Follow these steps to install and set up UX Travel Agency:</p>
+        <p>Follow these simple steps to install and set up the UX Travel Agency Management Software:</p>
         <ol>
-          <li>Upload the downloaded <code>ux-travel-agency.zip</code> file to your web server directory using cPanel (e.g., <code>public-html/ux-travel-agency.zip or admin.yourdomain.com/ux-travel-agency.zip</code>).</li>
-          <li>Now extract the zip file and select all files folder in the <code>ux-travel-agency</code> folder and then move all files to the <code>public-html or admin.yourdomain.com</code> main directory.</li>
-          <li>Create a MySQL database and import the <code>schema.sql</code> file to create all necessary database tables.</li>
-          <li>Edit the <code>config.php</code> file and then first update the database name, database user and password information correctly.</li>
-          <li>Set the correct <code>APP_URL</code> in <code>config.php</code> to match your installation path.</li>
-          <li>Ensure the <code>uploads/</code> directory is writable (chmod 755).</li>
-          <li>Access the application at your configured URL and log in with your admin credentials.</li>
+          <li>Upload the downloaded <code>ux-travel-agency.zip</code> file to your web server using cPanel (for example, <code>public_html/ux-travel-agency.zip</code> or <code>admin.yourdomain.com/ux-travel-agency.zip</code>).</li>
+          <li>Extract the ZIP file. Open the <code>ux-travel-agency</code> folder, select all files and folders inside it, and move them to your main directory (<code>public_html</code> or <code>admin.yourdomain.com</code>).</li>
+          <li>Create a new MySQL database and a database user, then assign the user to the database with all privileges.</li>
+          <li>Import the <code>schema.sql</code> file into the newly created database to generate the required tables.</li>
+          <li>Open the <code>config.php</code> file and update the database name, username, and password with your database credentials.</li>
+          <li>Set the correct <code>APP_URL</code> in <code>config.php</code> according to your installation path.</li>
+          <li>Make sure the <code>uploads/</code> directory is writable (recommended permission: <code>755</code>).</li>
+          <li>Access the application at your configured URL.</li>
         </ol>
+        
+        <p><strong>Admin Login Information:</strong><br>
+        The default admin login credentials will be sent to the administrator’s email address after installation.</p>
+        
+        <p><strong>Security Notice:</strong><br>
+        Once logged in, you can change the admin email address and password at any time from your account settings. For security reasons, it is strongly recommended to update the default credentials immediately.</p>
       </section>
 
       <!-- FEATURES -->
