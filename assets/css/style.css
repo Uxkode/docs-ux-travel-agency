@@ -402,11 +402,10 @@ code {
 }
 .site-footer a {
     text-decoration: none;
-    color: green;
-    font-weight: 400;
+    color: var(--color-text);
 }
 .site-footer a:hover {
-    font-weight: 600;
+    text-decoration: underline;
 }
 
 /*----------------------
