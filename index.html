@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#1890ff" />
+
+  <title>Documentation for UX Travel Agency Management Software</title>
+  <meta name="description" content="A complete documentation for UX Travel Agency management software" />
+
+  <link rel="icon" type="image/svg" href="https://uxkode.github.io/docs-ux-travel-agency/assets/img/favicon.svg" />
+  <link rel="stylesheet" href="https://uxkode.github.io/docs-ux-travel-agency/assets/css/style.css" />
+
+  <script>
+    (function () {
+      "use strict";
+
+      try {
+        const stored = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const dark = stored ? stored === "dark" : prefersDark;
+
+        if (dark) {
+          document.documentElement.classList.add("dark");
+        }
+        
+      } catch (error) {
+        // Fail silently if localStorage or matchMedia is blocked
+      }
+    })();
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header" role="banner">
+    <div class="logo-area">
+      <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Open navigation" aria-controls="sidebar" aria-expanded="false">
+        ☰
+      </button>
+
+      <a href="#" class="site-logo">
+        <img src="https://uxkode.github.io/docs-ux-travel-agency/assets/img/ux-travel-agency-logo.svg" alt="UX Travel Agency Logo" class="logo logo-light">
+        <img src="https://uxkode.github.io/docs-ux-travel-agency/assets/img/ux-travel-agency-logo-white.svg" alt="UX Travel Agency Logo Dark" class="logo logo-dark">
+      </a>
+    </div>
+
+    <div class="search">
+      <label class="sr-only" for="docSearch">Search</label>
+      <input id="docSearch" type="search" placeholder="Search documentation…" autocomplete="off" />
+    </div>
+
+    <div class="header-actions">
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">🌙</button>
+      <a class="button primary" href="#getting-started">Get Started</a>
+    </div>
+  </header>
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside id="sidebar" class="sidebar" role="navigation" aria-label="Sidebar">
+    <nav class="sidebar-nav">
+      <div class="sidebar-section">
+        <div class="sidebar-title">Getting Started</div>
+        <ul>
+          <li><a href="#getting-started">Installation & Setup</a></li>
+          <li><a href="#key-features">Features Overview</a></li>
+          <li><a href="#requirements">Requirements</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-title">Core Features</div>
+        <ul>
+          <li><a href="#customer-management">Customer Management</a></li>
+          <li><a href="#agent-management">Agent Management</a></li>
+          <li><a href="#financial-tracking">Financial Tracking</a></li>
+          <li><a href="#invoices">Invoices & Reports</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-title">Administration</div>
+        <ul>
+          <li><a href="#user-management">User Management</a></li>
+          <li><a href="#settings">Settings & Configuration</a></li>
+          <li><a href="#activity-logs">Activity Logs</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-title">Support</div>
+        <ul>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#troubleshooting">Troubleshooting</a></li>
+          <li><a href="#changelog">Changelog</a></li>
+        </ul>
+      </div>
+    </nav>
+  </aside>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main id="content" class="content" role="main">
+    <article class="prose">
+
+      <!-- INTRO -->
+      <h1>UX Travel Agency Management System</h1>
+      <p class="lead">
+        UX Travel Agency is a comprehensive web-based management system designed for travel agencies to streamline operations, manage customers and agents, track finances, and generate professional invoices and reports — all from one intuitive dashboard.
+      </p>
+
+      <!-- GETTING STARTED -->
+      <section id="getting-started">
+        <h2>Getting Started</h2>
+        <p>Follow these steps to install and set up UX Travel Agency:</p>
+        <ol>
+          <li>Download the project files and extract them to your web server directory (e.g., <code>htdocs/ux-travel-agency/</code>).</li>
+          <li>Create a MySQL database and import the <code>schema.sql</code> file.</li>
+          <li>Update the database credentials in <code>config.php</code> with your connection details.</li>
+          <li>Set the correct <code>APP_URL</code> in <code>config.php</code> to match your installation path.</li>
+          <li>Ensure the <code>uploads/</code> directory is writable (chmod 755).</li>
+          <li>Access the application at your configured URL and log in with your admin credentials.</li>
+        </ol>
+      </section>
+
+      <!-- FEATURES -->
+      <section id="key-features">
+        <h2>Key Features</h2>
+        <ul>
+          <li><strong>Customer Management</strong> - Add, edit, and delete customer profiles with complete contact information.</li>
+          <li><strong>Agent Management</strong> - Manage travel agents and track their performance.</li>
+          <li><strong>Earnings Tracking</strong> - Record and categorize revenue with detailed earning reports.</li>
+          <li><strong>Expense Management</strong> - Track business expenses with customizable categories.</li>
+          <li><strong>Invoice Generation</strong> - Create professional PDF invoices with custom company logos.</li>
+          <li><strong>Activity Logging</strong> - Comprehensive audit trail of all system activities.</li>
+          <li><strong>User Management</strong> - Create admin and staff accounts with role-based access.</li>
+          <li><strong>Responsive Dashboard</strong> - Mobile-friendly interface with real-time metrics.</li>
+          <li><strong>Settings Customization</strong> - Personalize app branding, logos, and company information.</li>
+          <li><strong>Detailed Reports</strong> - Generate earnings, expenses, and activity reports.</li>
+        </ul>
+      </section>
+
+      <!-- REQUIREMENTS -->
+      <section id="requirements">
+        <h2>System Requirements</h2>
+        <ul>
+          <li>PHP 7.4 or later</li>
+          <li>MySQL 5.7 or later</li>
+          <li>Apache web server with mod_rewrite enabled</li>
+          <li>Modern web browser with JavaScript enabled</li>
+          <li>Minimum 10MB disk space for application files</li>
+        </ul>
+      </section>
+      <div class="uxkode-spacer"></div>
+
+      <!-- CUSTOMER MANAGEMENT -->
+      <section id="customer-management">
+        <h2>Customer Management</h2>
+        <p>Manage all your travel customers from a centralized location with complete contact information and booking history.</p>
+        <ol>
+          <li>Go to <strong>Customers</strong> from the main menu.</li>
+          <li>Click <strong>Add New Customer</strong> to create a new customer profile.</li>
+          <li>Fill in customer details including name, email, phone, and address.</li>
+          <li>Save the customer profile to track their bookings and interactions.</li>
+          <li>Click on a customer to view their complete profile and associated bookings.</li>
+          <li>Edit or delete customer information as needed.</li>
+        </ol>
+        <p><strong>Tip:</strong> Keep customer information up-to-date for better communication and booking accuracy.</p>
+      </section>
+      <div class="uxkode-spacer"></div>
+
+      <!-- AGENT MANAGEMENT -->
+      <section id="agent-management">
+        <h2>Agent Management</h2>
+        <p>Manage your travel agents and track their performance, commissions, and activities.</p>
+        <ol>
+          <li>Navigate to <strong>Agents</strong> from the sidebar menu.</li>
+          <li>Click <strong>Add New Agent</strong> to create a new agent profile.</li>
+          <li>Enter agent details including name, email, phone, and commission rate.</li>
+          <li>Assign agents to bookings and track their performance metrics.</li>
+          <li>View agent earnings and calculate commissions automatically.</li>
+          <li>Update agent information and commission rates as needed.</li>
+        </ol>
+        <p><strong>Tip:</strong> Use agent tracking to monitor performance and optimize your team productivity.</p>
+      </section>
+      <div class="uxkode-spacer"></div>
+
+      <!-- FINANCIAL TRACKING -->
+      <section id="financial-tracking">
+        <h2>Financial Tracking</h2>
+        <p>Monitor your travel agency's earnings and expenses with detailed tracking and categorization.</p>
+        <h3>Recording Earnings</h3>
+        <ol>
+          <li>Go to <strong>Earnings</strong> from the menu.</li>
+          <li>Click <strong>Add Earning</strong> to record a new revenue entry.</li>
+          <li>Select an earning category (e.g., booking commission, service fee).</li>
+          <li>Enter the amount, date, and description.</li>
+          <li>Optionally assign the earning to an agent.</li>
+          <li>Save to update your revenue records.</li>
+        </ol>
+        <h3>Managing Expenses</h3>
+        <ol>
+          <li>Navigate to <strong>Expenses</strong> from the menu.</li>
+          <li>Click <strong>Add Expense</strong> to record a new business expense.</li>
+          <li>Select an expense category (e.g., office supplies, marketing).</li>
+          <li>Enter the amount, date, and description.</li>
+          <li>Save the expense record for accounting purposes.</li>
+        </ol>
+        <p><strong>Tip:</strong> Regularly update earnings and expenses to maintain accurate financial records and generate meaningful reports.</p>
+      </section>
+
+      <div class="uxkode-spacer"></div>
+
+      <!-- INVOICES & REPORTS -->
+      <section id="invoices">
+        <h2>Invoices & Reports</h2>
+        <p>Generate professional PDF invoices and comprehensive business reports.</p>
+        <h3>Creating Invoices</h3>
+        <ol>
+          <li>Go to <strong>Reports</strong> from the main menu.</li>
+          <li>Select invoice template and customer information.</li>
+          <li>Review invoice details (items, amounts, taxes).</li>
+          <li>Your custom logo (set in Settings) will appear on the invoice.</li>
+          <li>Download or print the invoice as PDF.</li>
+        </ol>
+        <h3>Generating Reports</h3>
+        <ol>
+          <li>Navigate to <strong>Reports</strong> section.</li>
+          <li>Select report type (earnings, expenses, activity log).</li>
+          <li>Choose date range and apply filters if needed.</li>
+          <li>Review detailed report with charts and summaries.</li>
+          <li>Export or print for record-keeping.</li>
+        </ol>
+      </section>
+
+      <div class="uxkode-spacer"></div>
+
+      <!-- USER MANAGEMENT -->
+      <section id="user-management">
+        <h2>User Management</h2>
+        <p>Create and manage admin and staff user accounts with appropriate access levels.</p>
+        <ol>
+          <li>Go to <strong>Users</strong> from the admin menu.</li>
+          <li>Click <strong>Add New User</strong> to create a new account.</li>
+          <li>Enter user details: name, email, username, and password.</li>
+          <li>Save the user account.</li>
+          <li>Manage user profiles and permissions from the Users dashboard.</li>
+          <li>Edit user information or reset passwords as needed.</li>
+          <li>Delete inactive accounts from the system.</li>
+        </ol>
+      </section>
+
+      <div class="uxkode-spacer"></div>
+
+      <!-- SETTINGS & CONFIGURATION -->
+      <section id="settings">
+        <h2>Settings & Configuration</h2>
+        <p>Customize your application with company information and branding.</p>
+        <ol>
+          <li>Click <strong>Settings</strong> from the main menu.</li>
+          <li>Update your company name, tagline, and contact information.</li>
+          <li>Set your business address, city, and country.</li>
+          <li>Configure your application URL and currency.</li>
+          <li><strong>Upload Custom Logos:</strong> App logo, favicon, invoice logo, and login page logo.</li>
+          <li>Save all changes to apply them across the system.</li>
+        </ol>
+        <p><strong>Logo Guidelines:</strong> JPG/PNG formats, recommended sizes for best appearance, max file sizes enforced.</p>
+      </section>
+
+      <div class="uxkode-spacer"></div>
+
+      <!-- ACTIVITY LOGS -->
+      <section id="activity-logs">
+        <h2>Activity Logs</h2>
+        <p>Track all system activities and user actions for security and accountability.</p>
+        <ol>
+          <li>Navigate to <strong>Activity Log</strong> from the menu.</li>
+          <li>View complete audit trail of all system actions.</li>
+          <li>Filter logs by user, action type, or date range.</li>
+          <li>Search for specific activities using keywords.</li>
+          <li>Export logs for compliance and record-keeping.</li>
+        </ol>
+      </section>
+
+      <div class="uxkode-spacer"></div>
+
+      <section id="faq">
+        <h2>FAQ</h2>
+        <details>
+          <summary>Is the system mobile-friendly?</summary>
+          <p>Yes, UX Travel Agency features a fully responsive design that works seamlessly on desktop, tablet, and mobile devices.</p>
+        </details>
+        <details>
+          <summary>Can I customize invoice templates?</summary>
+          <p>Yes, you can customize invoice appearance including company logo, header information, and footer details from the Settings page.</p>
+        </details>
+        <details>
+          <summary>How do I backup my data?</summary>
+          <p>Regularly backup your database using MySQL administration tools or automated backup scripts. Also backup the entire application folder.</p>
+        </details>
+        <details>
+          <summary>Can I export reports to PDF?</summary>
+          <p>Yes, all reports can be generated as PDF files for easy sharing, printing, and archiving.</p>
+        </details>
+        <details>
+          <summary>How do I reset a forgotten password?</summary>
+          <p>Navigate to the login page and use the "Forgot Password" option to reset your password via email verification.</p>
+        </details>
+      </section>
+      <div class="uxkode-spacer"></div>
+
+      <!-- TROUBLESHOOTING -->
+      <section id="troubleshooting">
+        <h2>Troubleshooting</h2>
+        <div class="callout warning">
+          <strong>Tip:</strong> Always check the activity logs to troubleshoot issues and understand what actions were performed.
+        </div>
+        <ul>
+          <li>If you see a "database connection error", verify your database credentials in config.php.</li>
+          <li>If images don't upload, ensure the uploads/ directory has write permissions (chmod 755).</li>
+          <li>If you can't log in, clear your browser cache and cookies, then try again.</li>
+          <li>For PDF generation issues, verify that the uploads/ directory is writable and has sufficient disk space.</li>
+          <li>If features are missing, ensure the database schema was properly imported with all required tables.</li>
+          <li>Check server error logs if the application produces unexpected errors or blank pages.</li>
+        </ul>
+      </section>
+      <div class="uxkode-spacer"></div>
+
+      <!-- CHANGELOG -->
+      <section id="changelog">
+        <h2>Changelog</h2>
+        <ul class="changelog">
+          <li><span class="badge success">1.1.0</span> Enhanced settings page with improved image management, SweetAlert2 confirmations, and bug fixes.</li>
+          <li><span class="badge success">1.0.0</span> Initial release — includes customer, agent, financial tracking, invoicing, and reporting features.</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+  <div class="uxkode-spacer"></div>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer" role="contentinfo">
+    <p>© <span id="year"></span> UX Travel Agency. A complete travel agency management software built with PHP and MySQL.</p>
+  </footer>
+
+  <div class="overlay" id="overlay" hidden></div>
+  <script src="https://uxkode.github.io/docs-ux-travel-agency/assets/js/script.js"></script>
+</body>
+</html>
