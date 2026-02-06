@@ -93,7 +93,7 @@
       <div class="sidebar-section">
         <div class="sidebar-title">Support</div>
         <ul>
-          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#faq-support">FAQ and Support</a></li>
           <li><a href="#troubleshooting">Troubleshooting</a></li>
           <li><a href="#changelog">Changelog</a></li>
         </ul>
@@ -131,6 +131,25 @@
         
         <p><strong>Security Notice:</strong><br>
         Once logged in, you can change the admin email address and password at any time from your account settings. For security reasons, it is strongly recommended to update the default credentials immediately.</p>
+
+        <h3>SMTP Email Configuration</h3>
+        <p>To enable application emails (password resets, notifications), configure SMTP settings in the <code>config.php</code> file located in the application root. Follow these steps:</p>
+        <ol>
+          <li>Open the application's <code>config.php</code> (for example: <code>ux-travel-agency/config.php</code>).</li>
+          <li>Find the <strong>Email SMTP Connection</strong> section where the constants below are defined: <code>SMTP_HOST</code>, <code>SMTP_USERNAME</code>, <code>SMTP_PASSWORD</code>, <code>SMTP_ENCRYPTION</code>, <code>SMTP_PORT</code>, <code>MAIL_FROM</code>, and <code>FROM_NAME</code>.</li>
+          <li>Replace the example values with your SMTP provider credentials. Example values:
+            <pre><code>define('SMTP_HOST', 'smtp.example.com');
+  define('SMTP_USERNAME', 'your-smtp-username');
+  define('SMTP_PASSWORD', 'your-smtp-password');
+  define('SMTP_ENCRYPTION', 'tls'); // 'tls', 'ssl' or empty string for no encryption
+  define('SMTP_PORT', '587'); // 587 for TLS, 465 for SSL, or 25 for no encryption
+  define('MAIL_FROM', 'admin@yourdomain.com');
+  define('FROM_NAME', 'Your Company');</code></pre>
+          </li>
+          <li>Save the file and avoid committing SMTP credentials to public repositories. Prefer environment variables for production secrets.</li>
+          <li>Test email delivery using the app's "Forgot Password" or a notification feature. If delivery fails, check provider settings, firewall rules, and correct ports/encryption.</li>
+          <li>For development use, consider a sandbox service such as Mailtrap to capture test emails safely.</li>
+        </ol>
       </section>
 
       <!-- FEATURES -->
@@ -295,11 +314,11 @@
 
       <div class="uxkode-spacer"></div>
 
-      <section id="faq">
+      <section id="faq-support">
         <h2>FAQ</h2>
         <details>
           <summary>Is the system mobile-friendly?</summary>
-          <p>Yes, UX Travel Agency features a fully responsive design that works seamlessly on desktop, tablet, and mobile devices.</p>
+          <p>Yes — the interface is fully responsive and works across desktop, tablet, and mobile devices.</p>
         </details>
         <details>
           <summary>Can I customize invoice templates?</summary>
@@ -317,6 +336,16 @@
           <summary>How do I reset a forgotten password?</summary>
           <p>Navigate to the login page and use the "Forgot Password" option to reset your password via email verification.</p>
         </details>
+
+        <h2>Support</h2>
+        <p>If you need help, contact our support team at <code><a href="mailto:uzzal@uxkode.com">uzzal@uxkode.com</a></code>. Include the following when you reach out:</p>
+        <ul>
+          <li>Your site URL (where the app is installed)</li>
+          <li>PHP version and webserver (Apache/Nginx)</li>
+          <li>A clear description of the issue and steps to reproduce it</li>
+          <li>Any relevant error messages or screenshots</li>
+        </ul>
+        <p>For development/testing, mention if you are using a sandbox SMTP (e.g., Mailtrap) or local server setup.</p>
       </section>
       <div class="uxkode-spacer"></div>
 
