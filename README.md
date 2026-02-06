@@ -12,7 +12,8 @@ This documentation serves as your complete guide to setup, configuration, and da
 ⚙️ **Configuration Guides** - Configure app settings, branding, and logos  
 🛠️ **Feature Documentation** - Comprehensive guides for all modules  
 ❓ **Troubleshooting & FAQs** - Solutions to common issues  
-📊 **User Management** - Create and manage user accounts  
+📊 **User Management** - Create and manage user accounts
+📧 **Email Feature** - Send login info to the newly added admin user, also send email to verify & reset their password
 💰 **Financial Management** - Track earnings and expenses  
 📝 **Invoicing & Reports** - Generate professional invoices and reports  
 
