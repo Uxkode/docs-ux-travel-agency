@@ -12,9 +12,8 @@ This documentation serves as your complete guide to setup, configuration, and da
 ⚙️ **Configuration Guides** - Configure app settings, branding, and logos  
 🛠️ **Feature Documentation** - Comprehensive guides for all modules  
 ❓ **Troubleshooting & FAQs** - Solutions to common issues  
-📊 **User Management** - Create and manage user accounts
-📧 **Email Feature** - Send login info to the newly added admin user, also send email to verify & reset their password
-💰 **Financial Management** - Track earnings and expenses  
+📊 **User Management & Email Feature** - Create and manage user accounts, send login info/reset pass email  
+💰 **Financial Management** - Track earnings, expenses, and overall financial records  
 📝 **Invoicing & Reports** - Generate professional invoices and reports  
 
 
@@ -35,6 +34,7 @@ This documentation serves as your complete guide to setup, configuration, and da
 ✅ **Invoice Generation** - Create professional PDF invoices  
 ✅ **Activity Logging** - Complete audit trail of all actions  
 ✅ **User Management** - Multi-user support with roles  
+✅ **Email Sending Feature** - New admin login info, forgot/reset password  
 ✅ **Settings & Branding** - Customize app appearance  
 ✅ **Detailed Reports** - Generate business analytics  
 ✅ **Responsive Design** - Works on all devices  
